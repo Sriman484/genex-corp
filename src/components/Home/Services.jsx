@@ -121,11 +121,8 @@ function Services() {
                 className="absolute left-3 top-2.5 text-gray-500"
               />
             </div>
-            <select
-              value={filter}
-              onChange={(e) => setFilter(e.target.value)}
-              className="border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:ring-red-500"
-            >
+            <select value={filter} onChange={(e) => setFilter(e.target.value)}
+              className="hidden md:block border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:ring-red-500">
               {categories.map((cat, i) => (
                 <option key={i} value={cat}>
                   {cat}
