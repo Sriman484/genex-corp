@@ -6,6 +6,8 @@ import designer from "../../assets/designer.png";
 import training from "../../assets/training.png";
 import admin from "../../assets/admin.png";
 import country from "../../assets/country.png";
+import QuickEnrollment from './QuickEnrollment';
+import EnrollForm from './EnrollForm';
 
 const trainingSections = [
   {
@@ -267,53 +269,7 @@ function CorporateTraining() {
               </motion.div>
             )}
           </div>
-
-          <div className="lg:col-span-1">
-            <div className="bg-white rounded-2xl shadow-sm p-8 sticky top-8">
-              <h2 className="text-xl font-bold mb-6 text-gray-900">Quick Enrollment</h2>
-              <form className="space-y-4">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
-                  <input
-                    type="text"
-                    className="w-full px-4 py-2 rounded-lg border border-gray-300"
-                    placeholder="Enter your name"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
-                  <input
-                    type="email"
-                    className="w-full px-4 py-2 rounded-lg border border-gray-300"
-                    placeholder="Enter your email"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
-                  <input
-                    type="tel"
-                    className="w-full px-4 py-2 rounded-lg border border-gray-300"
-                    placeholder="Enter your phone number"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Course Type</label>
-                  <select className="w-full px-4 py-2 rounded-lg border border-gray-300">
-                    <option value="">Select a course type</option>
-                    <option value="web">Web Class - $800</option>
-                    <option value="classroom5">Classroom (5 people) - $1500</option>
-                    <option value="classroom10">Classroom (10 people) - $2500</option>
-                  </select>
-                </div>
-                <button
-                  type="submit"
-                  className="w-full py-3 rounded-lg bg-red-500 text-white font-medium hover:bg-red-600 transition-colors"
-                >
-                  Enroll Now
-                </button>
-              </form>
-            </div>
-          </div>
+          <QuickEnrollment />
         </div>
       </div>
 
@@ -333,65 +289,7 @@ function CorporateTraining() {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
             >
-              <div className="bg-white rounded-2xl shadow-xl w-full max-w-md p-8 relative">
-                <button
-                  onClick={() => setShowModal(false)}
-                  className="absolute top-4 right-4 text-gray-400 hover:text-gray-600"
-                >
-                  <X className="w-6 h-6" />
-                </button>
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">Complete Your Enrollment</h2>
-                <form className="space-y-4">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
-                    <input
-                      type="text"
-                      required
-                      className="w-full px-4 py-2 rounded-lg border border-gray-300"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
-                    <input
-                      type="email"
-                      required
-                      className="w-full px-4 py-2 rounded-lg border border-gray-300"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
-                    <input
-                      type="tel"
-                      required
-                      className="w-full px-4 py-2 rounded-lg border border-gray-300"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">Course Type</label>
-                    <select
-                      required
-                      className="w-full px-4 py-2 rounded-lg border border-gray-300"
-                    >
-                      <option value="">Select a course type</option>
-                      <option value="change-tech">Change in Technology - $450 per person</option>
-                      <option value="fresher">Fresher - $500 per person</option>
-                    </select>
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">Message (Optional)</label>
-                    <textarea
-                      rows="3"
-                      className="w-full px-4 py-2 rounded-lg border border-gray-300"
-                    ></textarea>
-                  </div>
-                  <button
-                    type="submit"
-                    className="w-full py-3 rounded-lg bg-red-500 text-white font-medium hover:bg-red-600 transition-colors"
-                  >
-                    Complete Enrollment
-                  </button>
-                </form>
-              </div>
+              <EnrollForm setShowModal={setShowModal}/>
             </motion.div>
           </>
         )}
