@@ -46,7 +46,7 @@ function Arena() {
           {newImages.map((logo, index) => (
             <div
               key={index}
-              className="bg-gray-50 p-4 rounded-xl shadow hover:shadow-lg transition-shadow duration-300 w-40 sm:w-44 md:w-48"
+              className="bg-gray-50 p-4 rounded-xl shadow hover:shadow-lg transition-shadow duration-300 w-2/5 sm:w-4 md:w-48"
             >
               <div className="flex items-center justify-center h-24">
                 <img
@@ -55,7 +55,9 @@ function Arena() {
                   className="max-h-full max-w-full object-contain"
                 />
               </div>
-              <p className="mt-2 text-sm font-medium text-gray-700">{logo.alt}</p>
+              <p className="mt-2 text-sm font-medium text-gray-700">
+                {logo.alt}
+              </p>
             </div>
           ))}
         </div>
@@ -70,7 +72,7 @@ function Arena() {
           {originalIndustries.map((logo, index) => (
             <div
               key={index}
-              className="bg-gray-50 p-4 rounded-xl shadow hover:shadow-lg transition-shadow duration-300 w-40 sm:w-44 md:w-48"
+              className="bg-gray-50 p-4 rounded-xl shadow hover:shadow-lg transition-shadow duration-300 w-2/5 sm:w-44 md:w-48"
             >
               <div className="flex items-center justify-center h-24">
                 <img
@@ -79,7 +81,9 @@ function Arena() {
                   className="max-h-full max-w-full object-contain"
                 />
               </div>
-              <p className="mt-2 text-sm font-medium text-gray-700">{logo.alt}</p>
+              <p className="mt-2 text-sm font-medium text-gray-700">
+                {logo.alt}
+              </p>
             </div>
           ))}
         </div>
