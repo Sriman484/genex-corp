@@ -87,17 +87,16 @@ const Navbar = () => {
       <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
         <Link to='/' className="flex items-center space-x-3 rtl:space-x-reverse">
           <img src={icon} className="h-10" alt="Logo" />
-          <span className="font-bold text-1xl text-gray-800 tracking-wide whitespace-nowrap">
+          <span className="font-bold text-1xl text-gray-800 tracking-wide whitespace-nowrap hidden md:block">
             <span className="text-red-600">GENEX</span> CORPORATE SERVICES PVT. LTD
           </span>
         </Link>
         <button
           onClick={toggleMobileMenu}
           type="button"
-          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden hover:bg-red-100 focus:outline-none focus:ring-2 focus:ring-red-200"
+          className="inline-flex items-center w-10 h-10 justify-center text-sm rounded-lg md:hidden hover:bg-red-100 focus:outline-none focus:ring-2 focus:ring-red-200"
           aria-controls="mega-menu-full"
-          aria-expanded={isMobileMenuOpen}
-        >
+          aria-expanded={isMobileMenuOpen}>
           <span className="sr-only">Toggle menu</span>
           <svg
             className="w-6 h-6"
@@ -130,11 +129,8 @@ const Navbar = () => {
               </button>
             </li>
             <li>
-              <button
-                ref={btnRef2}
-                onClick={toggleDropdown2}
-                className="flex items-center gap-2 w-full py-2 px-3 rounded-sm md:w-auto hover:bg-red-100 md:hover:bg-transparent md:border-0 md:hover:text-red-500 md:p-0"
-              >
+              <button ref={btnRef2} onClick={toggleDropdown2}
+                className="flex items-center gap-2 w-full py-2 px-3 rounded-sm md:w-auto hover:bg-red-100 md:hover:bg-transparent md:border-0 md:hover:text-red-500 md:p-0">
                 <Briefcase className="w-4 h-4" />
                 Services
                 <ChevronDown className="w-2.5 h-2.5 ms-2.5" />
