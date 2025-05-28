@@ -2,6 +2,9 @@ import { HomeIcon, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import React from "react";
 import Arena from "../Services/Arena";
+import designer from "../../assets/designer.png";
+import cloud from "../../assets/cloud.png";
+import devops from "../../assets/devops.png";
 
 function Portfolio() {
   return (
@@ -55,7 +58,7 @@ function Portfolio() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition-shadow duration-300 border-t-4 border-red-400 flex flex-col items-center">
             <img
-              src="/src/assets/designer.png"
+              src={designer}
               alt="Team"
               className="w-16 h-16 mb-4 rounded-full shadow"
             />
@@ -70,7 +73,7 @@ function Portfolio() {
           </div>
           <div className="bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition-shadow duration-300 border-t-4 border-yellow-400 flex flex-col items-center">
             <img
-              src="/src/assets/cloud.png"
+              src={cloud}
               alt="Consultative Approach"
               className="w-16 h-16 mb-4 rounded-full shadow"
             />
@@ -85,7 +88,7 @@ function Portfolio() {
           </div>
           <div className="bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition-shadow duration-300 border-t-4 border-green-400 flex flex-col items-center">
             <img
-              src="/src/assets/devops.png"
+              src={devops}
               alt="Collaboration"
               className="w-16 h-16 mb-4 rounded-full shadow"
             />
