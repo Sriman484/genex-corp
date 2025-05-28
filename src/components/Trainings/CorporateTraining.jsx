@@ -85,13 +85,13 @@ function CorporateTraining() {
             <li>
               <div className="flex items-center">
                 <ChevronRight size={12} className="mx-1 text-gray-500 rtl:rotate-180" />
-                <Link to="/training" className="ms-1 text-sm font-medium text-gray-700 hover:text-red-400">Trainings</Link>
+                <Link to="/corporate-training" className="ms-1 text-sm font-medium text-gray-700 hover:text-red-400">Trainings</Link>
               </div>
             </li>
             <li>
               <div className="flex items-center">
                 <ChevronRight size={12} className="mx-1 text-gray-500 rtl:rotate-180" />
-                <span className="ms-1 text-sm font-medium text-gray-700">Realtime Internships</span>
+                <span className="ms-1 text-sm font-medium text-gray-700">Corporate Training</span>
               </div>
             </li>
           </ol>
